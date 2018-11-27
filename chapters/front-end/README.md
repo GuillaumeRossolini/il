@@ -369,3 +369,8 @@ Some of the countries that were the most interesting to us:
 ![Belgium](../../images/network/cedexis-be.png "Belgium: AVG 3.7s, P90 6.7s")
 ![USA](../../images/network/cedexis-us.png "US: AVG 5.8s, P90 10.6s")
 ![China](../../images/network/cedexis-cn.png)
+
+
+1. [Guidelines](./chapters/guidelines/README.md)
+1. **[Front-end](./chapters/front-end/README.md)** (end of this chapter)
+1. [Scripts](./chapters/scripts/README.md)

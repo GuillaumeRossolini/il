@@ -412,3 +412,8 @@ However, you may want to watch out for the number of processes running at the sa
 [JPEG-2000]: https://github.com/uclouvain/openjpeg/
 [Guetzli]: https://github.com/google/guetzli
 [Butteraugli]: https://github.com/google/butteraugli
+
+
+1. [Guidelines](./chapters/guidelines/README.md)
+1. [Front-end](./chapters/front-end/README.md)
+1. **[Scripts](./chapters/scripts/README.md)** (end of this chapter)
