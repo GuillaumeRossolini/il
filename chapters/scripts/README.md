@@ -390,6 +390,9 @@ If you plan to run the script often, you may want to to ensure that the same ima
 * If the lock file doesn't exist, write the current PID to the lock file;
 * Otherwise, check its timestamp to abort the previous run or the current run of the encoder script and then update the lock file if necessary.
 
+An example of the data savings that can be achieved [is shown in this very repo](../../commit/c89797520186244a80f14e1662fc0df89663c000 "Image Optimisations for this repo").
+
+
 
 ### Improving even further
 
