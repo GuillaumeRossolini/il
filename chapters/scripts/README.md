@@ -2,7 +2,7 @@
 
 We find that the closest they are to the machine, the better we can compose our tools. Therefore, we usually install binaries from well-known open source initiatives and we build Bash (Linux) scripts to wrap and to chain them.
 
-Why Bash? It is exceptionally well documented and it is available natively on all major platforms: Linux and macOS, and now Windows as well if you install the Windows Subsystem for Linux.
+Why Bash? It is exceptionally well documented and it is available natively on all major platforms: Linux and macOS, and now Windows as well if you install the [Windows Subsystem for Linux][MSWSL].
 
 For tasks where Bash is ill-suited, we have been using another language. In our case, this is PHP but you should definitely keep your favorite.
 
@@ -145,10 +145,10 @@ Here are the dependencies we are going to review:
 [Brotli]
 Installed as: `/usr/local/sbin/brotli`
 
-[LZMA] (for Safari, rendered obsolete by Brotli)
+[LZMA] (for Safari, rendered obsolete by [Brotli][caniuse-br])
 Installed as: `/usr/local/bin/lzma`
 
-[JPEG-XR] (for Edge, rendered obsolete by WebP)
+[JPEG-XR] (for Edge, rendered obsolete by [WebP][caniuse-webp])
 Installed as: `/usr/local/bin/JxrEncApp`
 Sometimes, it is already installed with the system. Use `which JxrEncApp` to find out if this is the case.
 
@@ -402,6 +402,11 @@ Finally, the chain of encodings could be done in parallel instead of sequentiall
 However, you may want to watch out for the number of processes running at the same time. You may use up all the memory or even reach the maximum number of processes your system can handle at once. At that point, you may want to look into splitting your batch processing load.
 
 
+1. [Guidelines](./chapters/guidelines/README.md)
+1. [Front-end](./chapters/front-end/README.md)
+1. **[Scripts](./chapters/scripts/README.md)** (end of this chapter)
+
+
 
 [Brotli]: https://github.com/google/brotli
 [LZMA]: https://tukaani.org/xz/
@@ -412,8 +417,8 @@ However, you may want to watch out for the number of processes running at the sa
 [JPEG-2000]: https://github.com/uclouvain/openjpeg/
 [Guetzli]: https://github.com/google/guetzli
 [Butteraugli]: https://github.com/google/butteraugli
-
-
-1. [Guidelines](./chapters/guidelines/README.md)
-1. [Front-end](./chapters/front-end/README.md)
-1. **[Scripts](./chapters/scripts/README.md)** (end of this chapter)
+[MSWSL]: https://docs.microsoft.com/en-us/windows/wsl/install-win10
+[caniuse-br]: https://caniuse.com/#feat=brotli
+[caniuse-jxr]: https://caniuse.com/#feat=jpegxr
+[caniuse-webp]: https://caniuse.com/#search=webp
+[edge-webp]: https://developer.microsoft.com/en-us/microsoft-edge/platform/status/webpimageformat/

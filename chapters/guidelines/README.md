@@ -67,7 +67,7 @@ For instance, the logo from our parent company is a 8.6 Kio PNG file with a 6.4 
 
 Whenever that makes sense, we use SVG files instead of actual image files. For instance, the logos for our rental classification (black, gold, silver and ultra) weigh around 1 Kio for the source SVG, but around 470 Kio when Gzipped and usually less than 400 Kio with Brotli.
 
-For more details on image optimisation techniques, you can look up Addy Osmani’s eBook and Ilya Grigorik’s guide.
+For more details on image optimisation techniques, you can look up [Addy Osmani’s eBook][addy's image guide] and [Ilya Grigorik’s guide][ilya's image guide].
 
 Images are served depending on browser support and expected gains. In order, we will prioritize WebP first, then JP2/JXR and finally JPEG/PNG, with fallbacks to the non-optimised thumbnail and finally the full-size image.
 
@@ -81,6 +81,8 @@ In the case of CSS and JS files, they are also minified and post-processed befor
 
 When we ship a new release, we compress each asset with simple GZIP at first, and then we replace this file with a better Zopfli encoding. We also compress with LZMA and Brotli.
 
+![release timeline](../../images/release-timeline.png "Availability of asset compression formats with regards to the release process")
+
 For example, our own JS file is 223 Kio; minified, it becomes 139 Kio or 57 Kio once it is Gzipped; the final Zopfli file is 38 Kio while the LZMA is 33 Kio and the Brotli version is 31 Kio.
 
 As we will see later, even some of our pages are “static assets” as far as the web server is concerned.
@@ -91,3 +93,7 @@ Static assets are served depending on browser support and expected gains. In ord
 1. **[Guidelines](./chapters/guidelines/README.md)** (end of this chapter)
 1. [Front-end](./chapters/front-end/README.md)
 1. [Scripts](./chapters/scripts/README.md)
+
+
+[addy's image guide]: https://images.guide/
+[ilya's image guide]: https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization

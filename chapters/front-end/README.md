@@ -30,7 +30,7 @@ On the other hand, if your page consists mostly of a big list of images, like a 
 
 Users typically wait up to one second, sometimes three, until they lose patience and go away (there has been ample research on this by the likes of Google, Amazon). Think of it as a budget. If you are going to exceed this budget, and you should expect the first page load to do so because of the browser cache is not primed, then you will have to find ways to display things in chunks so the user stays focused.
 
-Web browsers are keenly aware of this issue and they are spending a lot of engineering to improve both the software and the documentation for web developers. One of the advantages of the very first versions of Chrome was their multi-process architecture back in 2008, where all tabs were not using the same process and therefore one overzealous script could not halt the whole browser. Another big step was Firefox Quantum in 2017: building on the multi-process idea, they now spread all tasks (download, parsing, layout etc.) over different threads so that these tasks can be processed in parallel without blocking the main thread. On the developer relations side, Google keeps educating developers about yet other ways to split their code so that the browser can "ship a frame" more often.
+Web browsers are keenly aware of this issue and they are spending a lot of engineering to improve both the software and the documentation for web developers. One of the advantages of the very first versions of Chrome was their multi-process architecture back in 2008, where all tabs were not using the same process and therefore one overzealous script could not halt the whole browser. Another big step was [Firefox Quantum](https://www.youtube.com/watch?v=OwXLYoUj8J4 "The future of the browser – Lin Clark – btconfBER2017") in 2017: building on the multi-process idea, they now spread all tasks (download, parsing, layout etc.) over different threads so that these tasks can be processed in parallel without blocking the main thread. On the developer relations side, Google keeps educating developers about yet other ways to split their code so that the browser can ["ship a frame" more often](https://www.youtube.com/watch?v=Vg60lf92EkM "Architecting Web Apps, Paul Lewis & Surma, Chrome Dev Summit 2018").
 
 Here are several ways to do this for a page with a long list of pictures. This list is not exhaustive.
 
@@ -38,9 +38,9 @@ Here are several ways to do this for a page with a long list of pictures. This l
 
 Basically, only load images that are on-screen or that are about to be displayed on-screen. Start with images displayed above-the-fold, then prioritize the others based on your knowledge of your pages. Maybe the images from the menu are next, or the images just below the fold, or wait for user action like scrolling, etc. Maybe you will want to load them all in a specific order, or trigger their loading with an event, or a combination of both (whichever comes first).
 
-If your strategy is sound, this technique is usually without any downside. This is why Chrome is experimenting with lazy-loading all images by default.
+If your strategy is sound, this technique is usually without any downside. This is why Chrome is experimenting with [lazy-loading all images by default][chrome-lazyload].
 
-On the technical side, this is essentially what IntersectionObserver was made for.
+On the technical side, this is essentially [what IntersectionObserver was made for][IntersectionObserver].
 
 ### use the dominant color as the background
 
@@ -50,7 +50,7 @@ This will have a low impact on the overall weight of the page, but still include
 
 The usual demo is Pinterest or a search with Google Image, or any of InstantLuxe.com's categories as well (shown below). To best observe this, use your browser’s developer tools to throttle the network.
 
-Here is an example loading sequence:
+Here is an [example loading sequence][wpt-bgcolor-demo]:
 
 ![background stage 1](../../images/demo/bgcolor-1.jpg)
 ![background stage 2](../../images/demo/bgcolor-2.jpg)
@@ -58,15 +58,15 @@ Here is an example loading sequence:
 ![background stage 3](../../images/demo/bgcolor-3.jpg)
 ![background stage 4](../../images/demo/bgcolor-4.jpg)
 
-Using this technique has a low impact on page size but the necessary indexing work may seem daunting. Another downside is when you also need strict Content-Security-Policy or Subresource Integrity rules preventing inline styles, in which case it becomes a bit tricky. An upside is that there is no JavaScript involved: this is the kind of optimization that wouldn't break other things even if it stopped working.
+Using this technique has a low impact on page size but the necessary indexing work may seem daunting. Another downside is when you also need strict [Content-Security-Policy][CSP] or [Subresource Integrity][SRI] rules preventing inline styles, in which case it becomes a bit tricky. An upside is that there is no JavaScript involved: this is the kind of optimization that wouldn't break other things even if it stopped working.
 
-_NB: At the moment, this doesn't work well with Chrome (Canary), likely because of its better handling of HTTP/2 priorities where above-the-fold images are loaded fast, so the background color is eclipsed early._
+_NB: At the moment, this doesn't work well with Chrome (Canary), likely because of its better handling of [HTTP/2 priorities](https://blog.cloudflare.com/http-2-prioritization-with-nginx/ "Optimizing HTTP/2 prioritization with BBR and tcp_notsent_lowat, Patrick Meenan, 2018") where above-the-fold images are loaded fast, so the background color is eclipsed early._
 
 ### Use a low-res image as a placeholder (blur-up)
 
 You can understand this either as a better way for the previous tip, or as basically another way to do progressive JPEGs: awareness of the network conditions, the device they are operating on and user interaction all become factors to determine the image quality best suited for each initial situation and at which point to move on to a better resolution.
 
-The idea is to generate very low resolution of your images and place them as the images’ URL for the initial page load, then dynamically fetch and swap the bigger resolution images. This way, the initial page load may have nothing (or just the background color) and then the smallest assets start arriving from the network. These low-res images are so small that they should arrive fast, especially with the help of HTTP/2 prioritization. At that point, users will see the outline of the image and they will have a general idea what to expect when the full image arrives. When that happens, you may want to apply a transition, perhaps morphing, depending on your need to attract the eye to the new image or not.
+The idea is to generate very low resolution of your images and place them as the images’ URL for the initial page load, then dynamically fetch and swap the bigger resolution images. This way, the initial page load may have nothing (or just the background color) and then the smallest assets start arriving from the network. These low-res images are so small that they should arrive fast, especially with the help of HTTP/2 prioritization. At that point, users will see the outline of the image and they will have a general idea what to expect when the full image arrives. When that happens, you may want to apply a transition, perhaps [morphing](https://www.youtube.com/watch?v=tHJwRWrexqg "Supercharged Live! (Polymer Summit 2017)"), depending on your need to attract the eye to the new image or not.
 
 The usual demo is the first image of every Medium post.
 
@@ -374,3 +374,11 @@ Some of the countries that were the most interesting to us:
 1. [Guidelines](./chapters/guidelines/README.md)
 1. **[Front-end](./chapters/front-end/README.md)** (end of this chapter)
 1. [Scripts](./chapters/scripts/README.md)
+
+
+[chrome-lazyload]: https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/czmmZUd4Vww/1-H6j-zdAwAJ
+[IntersectionObserver]: https://developers.google.com/web/updates/2016/04/intersectionobserver
+[wpt-bgcolor-demo]: https://www.webpagetest.org/result/181126_0W_d6654dbca936adc312deba74e4b4e62e/
+[CSP]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src
+[SRI]: https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
+
