@@ -2,11 +2,11 @@
 
 By simply following best practices and using good open source tools, not necessarily costly services, here is what you could achieve:
 
-![WPT mobile](./images/scoring/wpt-mobile.png)
+![WPT mobile](./images/scoring/wpt-mobile.png "WebPageTest score for the homepage (mobile)")
 
 above: WebPageTest score for the homepage (mobile)
 
-![WPT desktop](./images/scoring/wpt-desktop.png)
+![WPT desktop](./images/scoring/wpt-desktop.png "WebPageTest score for the homepage (desktop)")
 
 above: WebPageTest score for the homepage (desktop)
 
@@ -16,17 +16,17 @@ Another view is reported by PageSpeed Insights with Chrome UX Report (November 1
 
 Mobile:
 
-![WPT desktop](./images/scoring/psi-mobile-score.png)
+![WPT desktop](./images/scoring/psi-mobile-score.png "PSI score for mobile")
 
-![WPT desktop](./images/scoring/psi-mobile-fcp.png)
-![WPT desktop](./images/scoring/psi-mobile-fid.png)
+![WPT desktop](./images/scoring/psi-mobile-fcp.png "FCP score for mobile")
+![WPT desktop](./images/scoring/psi-mobile-fid.png "FID score for mobile")
 
 Desktop:
 
-![WPT desktop](./images/scoring/psi-desktop-score.png)
+![WPT desktop](./images/scoring/psi-desktop-score.png "PSI score for desktop")
 
-![WPT desktop](./images/scoring/psi-desktop-fcp.png)
-![WPT desktop](./images/scoring/psi-desktop-fid.png)
+![WPT desktop](./images/scoring/psi-desktop-fcp.png "FCP score for desktop")
+![WPT desktop](./images/scoring/psi-desktop-fid.png "FID score for desktop")
 
 What follows can be seen a set of guidelines, tips and tricks that we have used to improve the technical performance of our website. It may or may not apply to anyone else, or have the same results if you do.
 
