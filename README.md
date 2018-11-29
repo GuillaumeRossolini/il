@@ -33,9 +33,9 @@ What follows can be seen a set of guidelines, tips and tricks that we have used 
 Modern image optimisation tutorials on the web tend to use JavaScript as a base tech in their tooling. We have been to use Bash for the most part. To follow along, you will need to be able to install new software on a machine. Since we are talking about web performance, a web server is required as well (examples are provided for both **httpd** and **nginx**).
 
 
-1. [Guidelines](./chapters/guidelines/README.md)
-1. [Front-end](./chapters/front-end/README.md)
-1. [Scripts](./chapters/scripts/README.md)
+1. [Guidelines](./1-GUIDELINES.md)
+1. [Front-end](./2-FRONTEND.md)
+1. [Scripts](./3-SCRIPTS.md)
 
 
 [WPT]: https://www.webpagetest.org/
