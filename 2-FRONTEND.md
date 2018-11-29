@@ -371,9 +371,9 @@ Some of the countries that were the most interesting to us:
 ![China](../../images/network/cedexis-cn.png)
 
 
-1. [Guidelines](./chapters/guidelines/README.md)
-1. **[Front-end](./chapters/front-end/README.md)** (end of this chapter)
-1. [Scripts](./chapters/scripts/README.md)
+1. [Guidelines](./1-GUIDELINES.md)
+1. **[Front-end](./2-FRONTEND.md)** (end of this chapter)
+1. [Scripts](./3-SCRIPTS.md)
 
 
 [chrome-lazyload]: https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/czmmZUd4Vww/1-H6j-zdAwAJ

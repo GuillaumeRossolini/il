@@ -405,9 +405,9 @@ Finally, the chain of encodings could be done in parallel instead of sequentiall
 However, you may want to watch out for the number of processes running at the same time. You may use up all the memory or even reach the maximum number of processes your system can handle at once. At that point, you may want to look into splitting your batch processing load.
 
 
-1. [Guidelines](./chapters/guidelines/README.md)
-1. [Front-end](./chapters/front-end/README.md)
-1. **[Scripts](./chapters/scripts/README.md)** (end of this chapter)
+1. [Guidelines](./1-GUIDELINES.md)
+1. [Front-end](./2-FRONTEND.md)
+1. **[Scripts](./3-SCRIPTS.md)** (end of this chapter)
 
 
 

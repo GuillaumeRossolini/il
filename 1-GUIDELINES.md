@@ -90,9 +90,9 @@ As we will see later, even some of our pages are “static assets” as far as t
 Static assets are served depending on browser support and expected gains. In order, we will prioritize Brotli first, then LZMA (although it has since been phased out since Safari started supporting Brotli) and finally Zopfli/GZIP, with fallbacks to the uncompressed minified file and finally the source file.
 
 
-1. **[Guidelines](./chapters/guidelines/README.md)** (end of this chapter)
-1. [Front-end](./chapters/front-end/README.md)
-1. [Scripts](./chapters/scripts/README.md)
+1. **[Guidelines](./1-GUIDELINES.md)** (end of this chapter)
+1. [Front-end](./2-FRONTEND.md)
+1. [Scripts](./3-SCRIPTS.md)
 
 
 [addy's image guide]: https://images.guide/
