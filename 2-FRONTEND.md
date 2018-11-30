@@ -52,11 +52,11 @@ The usual demo is Pinterest or a search with Google Image, or any of InstantLuxe
 
 Here is an [example loading sequence][wpt-bgcolor-demo]:
 
-![background stage 1](../../images/demo/bgcolor-1.jpg)
-![background stage 2](../../images/demo/bgcolor-2.jpg)
+![background stage 1](./images/demo/bgcolor-1.jpg)
+![background stage 2](./images/demo/bgcolor-2.jpg)
 
-![background stage 3](../../images/demo/bgcolor-3.jpg)
-![background stage 4](../../images/demo/bgcolor-4.jpg)
+![background stage 3](./images/demo/bgcolor-3.jpg)
+![background stage 4](./images/demo/bgcolor-4.jpg)
 
 Using this technique has a low impact on page size but the necessary indexing work may seem daunting. Another downside is when you also need strict [Content-Security-Policy][CSP] or [Subresource Integrity][SRI] rules preventing inline styles, in which case it becomes a bit tricky. An upside is that there is no JavaScript involved: this is the kind of optimization that wouldn't break other things even if it stopped working.
 
@@ -332,13 +332,13 @@ _NB: to get the number of requests to fit in the same graph, they are represente
 
 Homepage throughput benchmark (0-1000 simultaneous clients):
 
-![benchmark](../../images/network/benchmark-0-1000.png "Homepage throughput benchmark (0-1000 simultaneous clients)")
+![benchmark](./images/network/benchmark-0-1000.png "Homepage throughput benchmark (0-1000 simultaneous clients)")
 
 Up to 700 clients, the time to first byte is consistently below 1 second for all requests. After that point, the testing tool started receiving responses above that threshold (and increasing).
 
 Homepage throughput benchmark (0-3000 simultaneous clients):
 
-![benchmark](../../images/network/benchmark-0-3000.png "Homepage throughput benchmark (0-3000 simultaneous clients)")
+![benchmark](./images/network/benchmark-0-3000.png "Homepage throughput benchmark (0-3000 simultaneous clients)")
 
 The latency decreases between 1000 and 2000 clients, probably due to the way nginx creates worker processes to handle an increasing load. Above 2000 clients, some requests start taking longer, affecting the number of received responses while the mean time to first byte increases ever so slightly.
 
@@ -358,17 +358,17 @@ So, we trusted our hosting provider to work on their peering with other networks
 
 Here are some latency numbers to get an idea:
 
-![worldmap](../../images/network/heatmap.png "InstantLuxe.com's total page load time according to Cedexis (last 30 days on Nov. 22nd, 90th percentile)")
-![worldmap legend](../../images/network/worldmap-scale.png)
+![worldmap](./images/network/heatmap.png "InstantLuxe.com's total page load time according to Cedexis (last 30 days on Nov. 22nd, 90th percentile)")
+![worldmap legend](./images/network/worldmap-scale.png)
 
 Some of the countries that were the most interesting to us:
 
-![France](../../images/network/cedexis-fr.png "France : AVG 4s, P90 7.7s")
-![Italy](../../images/network/cedexis-it.png "Italy: AVG 4s, P90 7.5s")
-![United Kindmon](../../images/network/cedexis-uk.png "UK: AVG 3.5s, P90 6.2s")
-![Belgium](../../images/network/cedexis-be.png "Belgium: AVG 3.7s, P90 6.7s")
-![USA](../../images/network/cedexis-us.png "US: AVG 5.8s, P90 10.6s")
-![China](../../images/network/cedexis-cn.png)
+![France](./images/network/cedexis-fr.png "France : AVG 4s, P90 7.7s")
+![Italy](./images/network/cedexis-it.png "Italy: AVG 4s, P90 7.5s")
+![United Kindmon](./images/network/cedexis-uk.png "UK: AVG 3.5s, P90 6.2s")
+![Belgium](./images/network/cedexis-be.png "Belgium: AVG 3.7s, P90 6.7s")
+![USA](./images/network/cedexis-us.png "US: AVG 5.8s, P90 10.6s")
+![China](./images/network/cedexis-cn.png)
 
 
 1. [Guidelines](./1-GUIDELINES.md)
