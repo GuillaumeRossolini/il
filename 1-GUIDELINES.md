@@ -81,7 +81,7 @@ In the case of CSS and JS files, they are also minified and post-processed befor
 
 When we ship a new release, we compress each asset with simple GZIP at first, and then we replace this file with a better Zopfli encoding. We also compress with LZMA and Brotli.
 
-![release timeline](../../images/demo/release-timeline.png "Availability of asset compression formats with regards to the release process")
+![release timeline](./images/demo/release-timeline.png "Availability of asset compression formats with regards to the release process")
 
 For example, our own JS file is 223 Kio; minified, it becomes 139 Kio or 57 Kio once it is Gzipped; the final Zopfli file is 38 Kio while the LZMA is 33 Kio and the Brotli version is 31 Kio.
 
