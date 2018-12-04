@@ -138,7 +138,7 @@ find /home/ilsa/tmp -regextype posix-egrep -regex '.+\.(gz|br)$' -print \
 
 ### Installing the binaries
 
-You can choose to install them from any package manager of your choice, or you can build them from source. We won’t go into the details of installing each here.
+You can choose to install them from any package manager of your choice, or you can build them from source. We won’t go into the details of installing each here, but you can find [here](./scripts/BUILDS.sh) a script that should build all of it on a vanilla Debian install.
 
 Here are the dependencies we are going to review:
 
