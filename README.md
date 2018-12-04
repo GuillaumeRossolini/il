@@ -1,3 +1,14 @@
+This repository is a collection of tips that were used at a previous job (InstantLuxe.com which was shut down Dec 31st, 2018), in order to improve the loading time of the web pages, most notably in relation to asset optimization and brower caching rules.
+
+Feel free to adapt any of this for your website, and don't hesitate to let me know if you do. Possible improvements are welcome _via_ issues or pull requests.
+
+The whole article is also available as a [PDF here](./Guillaume_Rossolini_-_How_we_improved_the_performance_of_our_website.pdf
+).
+
+Let's begin:
+
+
+
 # Web caching rules used at InstantLuxe.com
 
 By simply following best practices and using good open source tools, not necessarily costly services, here is what you could achieve:
