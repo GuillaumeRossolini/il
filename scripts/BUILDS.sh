@@ -1,6 +1,18 @@
 #!/usr/bin/env bash
+#
+# Script to install and build dependencies up to final programs like
+#  the httpd and nginx web servers,
+#  several versions of the PHP language,
+#  and some compression and image tools
+#
+# /!\ This is intended for demonstration purposes on a clean Debian install
+# /!\ Do not use on a Production server unless you understand what you are doing
+#
 {
-apt-get install ntp certbot locate make gcc g++ gcc-multilib pkg-config autoconf automake zip libbz2-dev libfreetype6-dev libgif-dev docbook-xsl python-dev python3-dev golang git unzip mailutils htop postfix libsasl2-modules libtool sudo sysstat dpkg-dev python libde265-dev tcl8.5 libxpm-dev libunistring-dev libfftw3-dev openbsd-inetd libicu-dev nfs-common
+apt-get install ntp certbot locate make gcc g++ gcc-multilib pkg-config autoconf automake \
+  zip libbz2-dev libfreetype6-dev libgif-dev docbook-xsl python-dev python3-dev golang git \
+  unzip mailutils htop postfix libsasl2-modules libtool sudo sysstat dpkg-dev python \
+  libde265-dev tcl8.5 libxpm-dev libunistring-dev libfftw3-dev openbsd-inetd libicu-dev nfs-common
 
 cd /usr/local/src && \
 wget https://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz && \
