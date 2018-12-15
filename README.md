@@ -1,4 +1,4 @@
-This repository is a collection of tips that were used at a previous job (InstantLuxe.com which was shut down Dec 31st, 2018), in order to improve the loading time of the web pages, most notably in relation to asset optimization and brower caching rules.
+This repository is a collection of tips that were used at a previous job (InstantLuxe.com, 2009-2018), in order to improve the loading time of the web pages, most notably in relation to asset optimization and brower caching rules.
 
 Feel free to adapt any of this for your website, and don't hesitate to let me know if you do. Possible improvements are welcome _via_ issues or pull requests.
 
