@@ -14,6 +14,7 @@ apt-get install ntp certbot locate make gcc g++ gcc-multilib pkg-config autoconf
   unzip mailutils htop postfix libsasl2-modules libtool sudo sysstat dpkg-dev python \
   libde265-dev tcl8.5 libxpm-dev libunistring-dev libfftw3-dev openbsd-inetd libicu-dev
 
+# version numbers of the libs and tools that will be built
 TMPV_AUTOCONF=2.69
 TMPV_AUTOMAKE_MIN=1.13.4
 TMPV_AUTOMAKE_MAX=1.16.1
@@ -85,12 +86,18 @@ TMPV_REDIS=4.0.11
 TMPV_BISON=3.1
 TMPV_RE2C=1.1.1
 TMPV_TIDY=5.6.0
+
+# PHP versions to build;
+# assumes that an alias is ready for each version,
+# for example in your users' .bashrc files:
+#   alias php72="/usr/local/php72/bin/php -c /usr/local/php72/etc/"
 TMPV_PHP56=5.6.39
 TMPV_PHP70=7.0.33
 TMPV_PHP71=7.1.25
 TMPV_PHP72=7.2.13
 TMPV_PHP73=7.3.0
 
+# version numbers of PHP dependencies
 TMPV_PECL_AMQP=1.9.3
 TMPV_PECL_HTTP_BRANCH5=2.6.0
 TMPV_PECL_HTTP_BRANCH7=3.2.0
