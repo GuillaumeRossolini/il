@@ -194,9 +194,9 @@ As stated before, Linux and Bash are very efficient at chaining commands. The bu
 
 The easiest way to batch-process images is to echo lists of filenames to the standard output that we pipe into the next script, which in turn echoes the filenames so they can be piped further. This way, we gain a measure of parallelism for free thanks to the very efficient streaming of the pipes (the calling script will pause when its buffer is full, and resume when it gets free).
 
-To that end, we will need a small Bash wrapper for each tool so we can standardize their usage. We will call our wrappers brotlify.sh, zopflify.sh, webpfy.sh, jp2fy.sh etc.
+To that end, we will need a small Bash wrapper for each tool so we can standardize their usage. We will call our wrappers `brotlify.sh`, `zopflify.sh`, `webpfy.sh`, `jp2fy.sh` _etc_.
 
-Here is an example of the proposed toolchain:
+Here is an example of [the proposed toolchain](./scripts)):
 ```bash
 find /path/to/images [options] -print | webpfy.sh | jp2fy.sh
 find /path/to/assets [options] -print | gzipfy.sh | brotlify.sh | zopflify.sh
