@@ -85,11 +85,11 @@ TMPV_REDIS=4.0.11
 TMPV_BISON=3.1
 TMPV_RE2C=1.1.1
 TMPV_TIDY=5.6.0
-TMPV_PHP56=5.6.38
-TMPV_PHP70=7.0.32
-TMPV_PHP71=7.1.22
-TMPV_PHP72=7.2.9
-TMPV_PHP73=7.3.0beta3
+TMPV_PHP56=5.6.39
+TMPV_PHP70=7.0.33
+TMPV_PHP71=7.1.25
+TMPV_PHP72=7.2.13
+TMPV_PHP73=7.3.0
 
 TMPV_PECL_AMQP=1.9.3
 TMPV_PECL_HTTP_BRANCH5=2.6.0
@@ -724,7 +724,7 @@ cd /usr/local/src/php-$TMPV_PHP72/ext/cphalcon/build && ./install --phpize /usr/
 php72 -m && php72 -v
 
 cd /usr/local/src && \
-wget https://downloads.php.net/~cmb/php-$TMPV_PHP73.tar.bz2 && \
+wget https://secure.php.net/distributions/php-$TMPV_PHP73.tar.bz2 && \
 cd /usr/local/src && \
 rm -R php-$TMPV_PHP73 2>/dev/null ; tar -xjf php-$TMPV_PHP73.tar.bz2 && \
 cd /usr/local/src/php-$TMPV_PHP73 && \
