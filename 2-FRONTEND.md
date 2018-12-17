@@ -326,19 +326,19 @@ $ h2load -D 60 -c 200 -t 10 -H "Accept-Encoding: br" "https://www.instantluxe.co
 
 _Obvious disclaimer: this is not representative of actual users, firstly because `h2load` doesn't parse HTML and therefore it doesn't download any resources, and also because real users don't come in a steady stream or all at once. What we are benchmarking here is a worst-case scenario but without the images._
 
-The following graph represents the speed at which the web server can deliver the homepage over the network, as well as the resilience to a sudden influx of visits. The metrics shown are the number of requests per second that were sent, the total volume of received data, the max time to first byte and the mean time to first byte.
+The following graph represents the speed at which the web server can deliver the homepage over the network, as well as the resilience to a sudden influx of visits. The metrics shown are the number of requests per second that were sent, the total volume of received data, the max time to first byte and the mean time to first byte. The numbers are archived [in the repository](./datasets/homepage-delivery-benchmark.csv).
 
-_NB: to get the number of requests to fit in the same graph, they are represented as hundreds. For example, at 700 clients and above, the number of requests caps at just below 700,000._
+_NB: to get the number of requests to fit in the same graph, they are represented as hundreds. For example, at 700 clients and above, the number of requests caps at just below 700,000 within 60 seconds._
 
-Homepage throughput benchmark (0-1000 simultaneous clients):
+Homepage throughput benchmark (0-1000 simultaneous clients over 60 seconds):
 
-![benchmark](./images/network/benchmark-0-1000.png "Homepage throughput benchmark (0-1000 simultaneous clients)")
+![benchmark](./images/network/benchmark-0-1000.png "Homepage throughput benchmark (0-1000 simultaneous clients over 60 seconds)")
 
 Up to 700 clients, the time to first byte is consistently below 1 second for all requests. After that point, the testing tool started receiving responses above that threshold (and increasing).
 
-Homepage throughput benchmark (0-3000 simultaneous clients):
+Homepage throughput benchmark (0-3000 simultaneous clients over 60 seconds):
 
-![benchmark](./images/network/benchmark-0-3000.png "Homepage throughput benchmark (0-3000 simultaneous clients)")
+![benchmark](./images/network/benchmark-0-3000.png "Homepage throughput benchmark (0-3000 simultaneous clients over 60 seconds)")
 
 The latency decreases between 1000 and 2000 clients, probably due to the way nginx creates worker processes to handle an increasing load. Above 2000 clients, some requests start taking longer, affecting the number of received responses while the mean time to first byte increases ever so slightly.
 
