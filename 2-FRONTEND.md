@@ -16,7 +16,7 @@ The one aspect of this protocol we have tried but that didn’t work out like ex
 
 We are aware that there is still much to do, especially splitting our own code into smaller files so that the browser doesn’t have to download our whole custom library of features from the very first visit.
 
-Take away: use & embrace HTTP/2 (mostly).
+Take away: use & embrace HTTP/2 ([mostly](https://www.youtube.com/watch?v=_VqOVXyYaug "LDNWebPerf Dec 2018 Pat Meenan / Kornel Lesinski")).
 
 ## Media
 
