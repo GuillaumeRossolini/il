@@ -60,7 +60,7 @@ Here is an [example loading sequence][wpt-bgcolor-demo]:
 
 Using this technique has a low impact on page size but the necessary indexing work may seem daunting. Another downside is when you also need strict [Content-Security-Policy][CSP] or [Subresource Integrity][SRI] rules preventing inline styles, in which case it becomes a bit tricky. An upside is that there is no JavaScript involved: this is the kind of optimization that wouldn't break other things even if it stopped working.
 
-_NB: At the moment, this doesn't work well with Chrome (Canary), likely because of its better handling of [HTTP/2 priorities](https://blog.cloudflare.com/http-2-prioritization-with-nginx/ "Optimizing HTTP/2 prioritization with BBR and tcp_notsent_lowat, Patrick Meenan, 2018") where above-the-fold images are loaded fast, so the background color is eclipsed early._
+_NB: At the moment, this doesn't work well with Chrome (Canary around v72, I'm not sure exactly), likely because of its better handling of [HTTP/2 priorities](https://blog.cloudflare.com/http-2-prioritization-with-nginx/ "Optimizing HTTP/2 prioritization with BBR and tcp_notsent_lowat, Patrick Meenan, 2018") where above-the-fold images are loaded fast, so the background color is eclipsed early._
 
 ### Use a low-res image as a placeholder (blur-up)
 
