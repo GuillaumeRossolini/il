@@ -2,11 +2,13 @@
 #
 # Script to install and build dependencies up to final programs like
 #  the httpd and nginx web servers,
-#  several versions of the PHP language,
-#  and some compression and image tools
+#  some compression and image tools,
+#  and several versions of the PHP language
 #
 # /!\ This is intended for demonstration purposes on a clean Debian install
 # /!\ Do not use on a Production server unless you understand what you are doing
+#
+# /!\ Last warning: uninstalling anything that was built from source is tricky
 #
 {
 apt-get install ntp certbot locate make gcc g++ gcc-multilib pkg-config autoconf automake \
@@ -87,10 +89,10 @@ TMPV_BISON=3.1
 TMPV_RE2C=1.1.1
 TMPV_TIDY=5.6.0
 
-# PHP versions to build;
-# assumes that an alias is ready for each version,
-# for example in your users' .bashrc files:
-#   alias php72="/usr/local/php72/bin/php -c /usr/local/php72/etc/"
+# PHP versions to build
+#  assumes that an alias is ready for each version,
+#  for example in your users' ~/.bashrc files:
+#    alias php72="/usr/local/php72/bin/php -c /usr/local/php72/etc/"
 TMPV_PHP56=5.6.39
 TMPV_PHP70=7.0.33
 TMPV_PHP71=7.1.25
