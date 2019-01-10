@@ -42,7 +42,7 @@ If your strategy is sound, this technique is usually without any downside. This 
 
 On the technical side, this is essentially [what IntersectionObserver was made for][IntersectionObserver].
 
-### use the dominant color as the background
+### Use the dominant color as the background
 
 Identify the main color of each image on the back-end, then use CSS to include that as a background for this image (tip: an inexpensive way to obtain that color is to reduce the image to 1px*1px).
 
