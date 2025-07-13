@@ -76,6 +76,11 @@ Here are some of the technologies you could use here: Service Worker, Intersecti
 
 Apart from the extra work needed to generate additional low quality thumbnails and their variants, there is also a considerable amount of work to build the logic to fetch and swap the images, especially considering efficient caching for the next page load. Because the goal is to reduce the total loading time of the page, fetching additional media from the network may be useful. In our case, the experiments didn’t measure up to what we expected and more work would have been required.
 
+### 2025 Addition: low quality image placeholder (blobhash)
+
+This was never a thing back then
+https://leanrada.com/notes/css-only-lqip/
+
 # Web server config
 
 With the following config, we have been able to serve hundreds of thousands of requests per minute on the homepage, not counting the assets (the bottleneck seems to happen around half a million per minute, see below for the benchmarks). The network throughput was more of a bottleneck than any dynamic part of the system like (usually) the database, or even the caches and search index.
